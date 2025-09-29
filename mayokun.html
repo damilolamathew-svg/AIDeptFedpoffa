@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Red Theme</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background-color: #fff5f5;
+      color: #330000;
+    }
+    header {
+      background: #990000;
+      color: #fff;
+      padding: 30px;
+      text-align: center;
+    }
+    nav {
+      background: #cc0000;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      font-weight: 600;
+    }
+    nav a:hover {
+      background: #e60000;
+      border-radius: 4px;
+    }
+    main {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    section {
+      background: #ffe6e6;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(153, 0, 0, 0.2);
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .project-card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 15px;
+      box-shadow: 0 2px 5px rgba(179, 0, 0, 0.15);
+    }
+    .project-card h3 {
+      margin-bottom: 10px;
+    }
+    footer {
+      background: #990000;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+    button {
+      background: #cc0000;
+      color: #fff;
+      border: none;
+      padding: 8px 15px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    button:hover {
+      background: #e60000;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Adegboyega Mayokun</h1>
+    <p>AI/HND/F23/0032</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact Us</a>
+    <a href="#profile">My Profile</a>
+  </nav>
+
+  <main>
+    <section id="home">
+      <h2>Welcome</h2>
+      <p>This is my personal portfolio showcasing my skills, projects, and experience.</p>
+    </section>
+
+    <section id="about">
+      <h2>About Us</h2>
+      <p>I am a passionate developer who loves creating dynamic and visually appealing websites and applications.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects">
+        <div class="project-card">
+          <h3>Project One</h3>
+          <p>Portfolio website built with HTML, CSS, and JavaScript.</p>
+          <button onclick="alert('More details soon!')">View More</button>
+        </div>
+        <div class="project-card">
+          <h3>Project Two</h3>
+          <p>E-commerce platform with payment integration.</p>
+          <button onclick="alert('More details soon!')">View More</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form onsubmit="handleForm(event)">
+        <label>Name:</label><br>
+        <input type="text" id="name" required><br><br>
+        <label>Email:</label><br>
+        <input type="email" id="email" required><br><br>
+        <label>Message:</label><br>
+        <textarea id="message" rows="4" required></textarea><br><br>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+    <section id="profile">
+      <h2>My Profile</h2>
+      <ul>
+        <li>Name: Adegboyega Taiwo Mayorkun</li>
+        <li>Role: Full Stack Developer</li>
+        <li>Skills: HTML, CSS, JS, React, Node.js</li>
+        <li>Experience: 5 years</li>
+        <li>Email: Mayokun@gmail.com</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Mayokun Portfolio. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function handleForm(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value;
+      alert(`Thank you, ${name}, your message has been received!`);
+    }
+  </script>
+</body>
+</html>
