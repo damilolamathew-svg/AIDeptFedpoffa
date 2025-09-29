@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moruf Sheriffdeen Olanrewaju - Portfolio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; line-height: 1.6; }
+    header { background: #333; color: #fff; padding: 20px 0; text-align: center; position: fixed; width: 100%; top: 0; z-index: 1000; }
+    header h1 { margin-bottom: 10px; }
+    nav ul { list-style: none; display: flex; justify-content: center; }
+    nav ul li { margin: 0 15px; }
+    nav ul li a { color: #fff; text-decoration: none; font-weight: bold; }
+    nav ul li a:hover { color: #f39c12; }
+
+    section { padding: 80px 20px; min-height: 100vh; }
+    #home { background: #f4f4f4; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+    #home h2 { font-size: 2.5rem; margin-bottom: 10px; }
+
+    #about, #projects, #contact { max-width: 1000px; margin: auto; }
+    #about h2, #projects h2, #contact h2 { margin-bottom: 20px; font-size: 2rem; text-align: center; color: #333; }
+    #about p { font-size: 1.1rem; text-align: justify; }
+
+    .projects-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .project { background: #f4f4f4; padding: 15px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center; }
+    .project img { width: 100%; border-radius: 10px; }
+
+    #contact p { font-size: 1.1rem; margin-bottom: 10px; text-align: center; }
+    footer { background: #333; color: #fff; text-align: center; padding: 15px; }
+
+    /* Smooth scrolling */
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Moruf Sheriffdeen Olanrewaju</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h2>Welcome to My Portfolio</h2>
+    <p>Student of Artificial Intelligence Technology, Federal Polytechnic Offa</p>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am a dedicated and motivated student of Artificial Intelligence Technology at Federal Polytechnic Offa, Kwara State, with a strong passion for cutting-edge technologies, data-driven problem-solving, and intelligent systems. My academic journey is focused on gaining in-depth knowledge of machine learning, neural networks, robotics, and data science.
+    </p>
+    <br>
+    <p>
+      I am committed to continuous learning and practical application of AI concepts to solve real-world challenges. I actively participate in group projects, research activities, and tech communities to broaden my skills and contribute to the growing field of Artificial Intelligence in Nigeria and beyond.
+    </p>
+  </section>
+
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="projects-container">
+      <div class="project">
+        <img src="https://source.unsplash.com/400x300/?school,project" alt="Project 1">
+        <h3>Project 1</h3>
+        <p>A sample school project showcasing AI concepts.</p>
+      </div>
+      <div class="project">
+        <img src="https://source.unsplash.com/400x300/?coding,computer" alt="Project 2">
+        <h3>Project 2</h3>
+        <p>Exploring data analysis with Python and AI tools.</p>
+      </div>
+      <div class="project">
+        <img src="https://source.unsplash.com/400x300/?robotics,technology" alt="Project 3">
+        <h3>Project 3</h3>
+        <p>Research on robotics and intelligent systems.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p><strong>Name:</strong> Moruf Sheriffdeen Olanrewaju</p>
+    <p><strong>School:</strong> Federal Polytechnic Offa, Kwara State</p>
+    <p><strong>Department:</strong> Artificial Intelligence Technology</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Moruf Sheriffdeen Olanrewaju | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    // Simple JS for highlighting active nav link
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll("nav ul li a");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 70;
+        const sectionHeight = section.clientHeight;
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach(link => {
+        if (link.getAttribute("href") === `#${current}`) {
+          link.style.color = "#f39c12";
+        } else {
+          link.style.color = "#fff";
+        }
+      });
+    });
+  </script>
+</body>
+</html>
